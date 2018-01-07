@@ -4,4 +4,7 @@
     <string name="credits"><![CDATA[Created with <3 by Juraj & Filip]]></string>
     <string name="add_beer">Add beer</string>
     <string name="favorite_beer">Favorite beer</string>
+    <string name="current">Current</string>
+    <string name="history">history</string>
+    <string name="favorites">Favorites</string>
 </resources>
