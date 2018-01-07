@@ -2,6 +2,7 @@ package com.pepcox.richtar.richtarjakub.activites
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.animation.AnimationUtils
@@ -15,7 +16,6 @@ import com.pepcox.richtar.richtarjakub.presenters.BeerContract
 import com.pepcox.richtar.richtarjakub.presenters.BeerPresenter
 import kotlinx.android.synthetic.main.activity_beers_list.*
 import javax.inject.Inject
-
 
 class BeersListActivity : AppCompatActivity(), BeerContract.View {
 
@@ -47,6 +47,23 @@ class BeersListActivity : AppCompatActivity(), BeerContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beers_list)
+
+        val bottomNavigationView: BottomNavigationView = bottom_navigation
+
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.action_history -> {
+
+                }
+                R.id.action_current -> {
+
+                }
+                R.id.action_favorites -> {
+
+                }
+            }
+            true
+        }
 
         RichtarJakupApp.beersComponent.inject(this)
 
